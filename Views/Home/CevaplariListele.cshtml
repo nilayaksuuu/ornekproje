@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ornekproje.Models.Cevap>
+    
+@{
+    Layout = null;
+}
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>
+            Katılanlar
+        </title>
+    </head>
+    <body>
+        <h2>
+            Cevabı Evet Olanların Listesi
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ornekproje.Models.Cevap x in Model)
+                {
+                    <tr>
+                        <td>@x.Ad</td>
+                        <td>@x.Soyad</td>
+                        <td>@x.Email</td>
+                        <td>@x.Telefon</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+    </html>

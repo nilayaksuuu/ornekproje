@@ -1,0 +1,34 @@
+﻿@model ornekproje.Models.Cevap
+  
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>
+        Tesekkurler
+    </title> 
+</head>
+<body>
+    <div>
+        <h1>
+            Bilgilendirme için teşekkür ederiz.@Model.Ad @Model.Soyad
+        </h1>
+        @if (Model.AspNetBiliyormu == true)
+            {
+                @:Ankete Katılımın İçin Teşekkür Ederiz. Görüşmek Üzere!
+            }
+        else
+            {
+                @:Üzgünüz bu iş için uygun değilsiniz :( 
+            }
+    </div>
+    Cevabı Evet olanları görmek için lütfen <a asp-action ="CevaplariListele" >buraya</a>tıklayınız
+</body>
+</html>
+
+

@@ -1,0 +1,42 @@
+﻿@model ornekproje.Models.Cevap
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<title>CevapFormu</title>
+</head>
+<body>
+<form asp-action="CevapFormu" method="post">
+    <div>
+        <label asp-for="Ad">Adınız:</label>
+        <input asp-for="Ad">
+    </div>
+    <div>
+        <label asp-for="Soyad">Soyadınız:</label>
+        <input asp-for="Soyad">
+    </div>
+    <div>
+        <label asp-for="Email">Email Adresiniz:</label>
+        <input asp-for="Email">
+    </div>
+    <div>
+        <label asp-for="Telefon">Telefonunuz:</label>
+        <input asp-for="Telefon">
+    </div>
+    <div>
+        <label>ASP.Net Core Biliyor Musunuz?</label>
+        <select asp-for="AspNetBiliyormu">
+            <option value="">Lütfen Bir Seçim Yapınız!</option>
+            <option value="true">Evet</option>
+            <option value="false">Hayır</option>
+        </select>
+    </div>
+    <button type="submit">Cevabı Gönder</button>
+</form>
+</body>
+</html>
